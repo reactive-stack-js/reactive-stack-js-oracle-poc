@@ -19,7 +19,7 @@ And [NodeJS](https://nodejs.org/)
 Go to [Oracle Database Enterprise Edition](https://hub.docker.com/_/oracle-database-enterprise-edition) and complete the "checkout". It's just a registration, it's free.
 
 docker pull store/oracle/database-enterprise:12.2.0.1
-docker run -p 1521:1521 -v C:/git/systools/fiddles/dbmirror/oraclevolume:/ORCL -d -it --name oracle store/oracle/database-enterprise:12.2.0.1
+docker run -p 1521:1521 -v C:/git/github/reactive-stack-js-oracle-poc/oraclevolume:/ORCL -d -it --name oracle store/oracle/database-enterprise:12.2.0.1
 
 sys
 Oradoc_db1
@@ -40,6 +40,11 @@ GRANT CONNECT, RESOURCE, DBA TO root;
 GRANT CREATE SESSION TO root;
 GRANT UNLIMITED TABLESPACE TO root;
 GRANT CHANGE NOTIFICATION TO root;
+
+GRANT SELECT ANY TRANSACTION TO root;
+GRANT SELECT ANY DICTIONARY TO root;
+GRANT CREATE SESSION TO root;
+GRANT EXECUTE_CATALOG_ROLE TO root;
 
 ALTER SYSTEM SET JOB_QUEUE_PROCESSES = 20;
 
