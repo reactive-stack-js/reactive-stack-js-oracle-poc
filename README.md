@@ -21,6 +21,8 @@ And [NodeJS](https://nodejs.org/)
 
 Go to [Oracle Database Enterprise Edition](https://hub.docker.com/_/oracle-database-enterprise-edition) and complete the "checkout". It's just a registration, it's free.
 
+Once completed, you should be at the __Oracle Database Server Docker Image Documentation__ page.
+
 ```cmd
 docker pull store/oracle/database-enterprise:12.2.0.1
 docker run -p 1521:1521 -v C:/git/github/reactive-stack-js-oracle-poc/oraclevolume:/ORCL -d -it --name oracle store/oracle/database-enterprise:12.2.0.1
