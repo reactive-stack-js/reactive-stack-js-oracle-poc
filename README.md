@@ -1,7 +1,9 @@
-# reactive-stack-js-oracle-poc
-reactive-stack-js oracle poc
+![reactive-stack-js](https://avatars0.githubusercontent.com/u/72337471?s=75)
+## reactive-stack-js-oracle-poc
 
-## oracle
+See [reactive-stack-js](https://github.com/reactive-stack-js) for more info.
+
+### oracle
 https://hub.docker.com/u/stojadinovicp/content/sub-c1da653d-1e2f-4ef5-85cd-674ce240722e
 
 docker pull store/oracle/database-enterprise:12.2.0.1
