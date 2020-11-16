@@ -9,17 +9,6 @@ const connectionConfig = {
 	events: true
 };
 
-const getData = async () => {
-	let sql = `SELECT * FROM GLOB_LOCKS`;
-
-	let conn = await oracledb.getConnection(connectionConfig);
-	let result = await conn.execute(sql);
-	await conn.close();
-	console.log(result.rows);
-	return result.rows;
-}
-getData();
-
 function myCallback(message) {
 	console.log('message', message);
 	// let rows = await getData();							// query the msgtable
@@ -38,3 +27,17 @@ const program = async () => {
 program()
 	.then(() => console.log('Waiting for oracle database events...'))
 	.catch(console.error);
+
+//
+// Test query:
+async function getData() {
+	let sql = `SELECT * FROM GLOB_LOCKS`;
+
+	let conn = await oracledb.getConnection(connectionConfig);
+	let result = await conn.execute(sql);
+	await conn.close();
+	console.log(result.rows);
+	return result.rows;
+}
+
+getData();
