@@ -30,6 +30,8 @@ Default pwd is: Oradoc_db1
 
 ```cmd
 docker exec -it oracle bash
+```
+```bash
 /u01/app/oracle/product/12.2.0/dbhome_1/bin/sqlplus / as sysdba
 ```
 

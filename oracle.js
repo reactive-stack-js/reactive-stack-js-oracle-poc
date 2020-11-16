@@ -33,7 +33,7 @@ const program = async () => {
 		callback: myCallback,
 		sql: `SELECT * FROM GLOB_LOCKS`
 	});
-	console.log("CQN subscription created");
+	console.log("CQN subscription created.");
 }
 program()
 	.then(() => console.log('Waiting for oracle database events...'))
