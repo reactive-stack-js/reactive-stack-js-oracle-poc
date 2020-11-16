@@ -1,0 +1,15 @@
+{
+	"name": "reactive-stack-js-oracle-poc",
+	"version": "0.0.1",
+	"description": "reactive-stack-js oracle poc",
+	"author": "Predrag Stojadinovic <predrag@stojadinovic.net>",
+	"scripts": {
+		"run": "node oracle.js",
+		"format": "prettier --write \"**/*.js\"",
+		"last": "yarn upgrade-interactive --latest",
+		"up": "yarn upgrade-interactive"
+	},
+	"dependencies": {
+		"oracledb": "^5.0.0"
+	}
+}
