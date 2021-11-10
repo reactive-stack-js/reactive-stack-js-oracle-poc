@@ -11,15 +11,20 @@ const connectionConfig = {
 
 function myCallback(message) {
 	console.log('message', message);
-	// let rows = await getData();							// query the msgtable
-	// console.log('message', JSON.stringify(rows));		// update the web page
+	console.log('txId', JSON.stringify(message?.txId));
+	console.log('txId', message.txId.toString('utf8'));
+	console.log('message', JSON.stringify(message));
 }
 
 const program = async () => {
+	console.log("Connecting...");
 	let connection = await oracledb.getConnection(connectionConfig);
+	console.log("Connected to oracle.");
 
+	console.log("Creating CQN subscription...");
 	await connection.subscribe('locks', {
 		callback: myCallback,
+		qos: 4,
 		sql: `SELECT * FROM GLOB_LOCKS`
 	});
 	console.log("CQN subscription created.");
